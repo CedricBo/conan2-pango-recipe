@@ -14,7 +14,7 @@ class PangoConan(ConanFile):
     options = {"shared": [True, False], "fPIC": [True, False], "with_libthai": [True, False], "with_cairo": [True, False], "with_xft": [True, False, "auto"], "with_freetype": [True, False, "auto"], "with_fontconfig": [True, False, "auto"]}
     default_options = {"shared": True, "fPIC": True, "with_libthai": False, "with_cairo": True, "with_xft": "auto", "with_freetype": "auto", "with_fontconfig": "auto"}
 
-    tool_requires = "meson/1.2.2"
+    tool_requires = "meson/1.2.2", "pkgconf/2.0.3"
     generators = "PkgConfigDeps"
 
     def requirements(self):
